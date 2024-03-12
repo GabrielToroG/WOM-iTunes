@@ -51,6 +51,8 @@
 		7FFA0B342BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B332BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift */; };
 		7FFA0B362BA0C2DE0000F9FB /* ApiiTunesListQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B352BA0C2DE0000F9FB /* ApiiTunesListQueryParams.swift */; };
 		7FFA0B3A2BA0C31D0000F9FB /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B392BA0C31D0000F9FB /* EncodableExtension.swift */; };
+		7FFA0B422BA0C4E90000F9FB /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B412BA0C4E90000F9FB /* HomeDataSource.swift */; };
+		7FFA0B442BA0C4F20000F9FB /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B432BA0C4F20000F9FB /* HomeRepository.swift */; };
 		B2699DE84AA0B11095E980E1 /* Pods_WOM_iTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFC9371B6EFD524A00C89E0 /* Pods_WOM_iTunes.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		7FFA0B332BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		7FFA0B352BA0C2DE0000F9FB /* ApiiTunesListQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiiTunesListQueryParams.swift; sourceTree = "<group>"; };
 		7FFA0B392BA0C31D0000F9FB /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		7FFA0B412BA0C4E90000F9FB /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		7FFA0B432BA0C4F20000F9FB /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		C793B4C0A65B28E69552F64E /* Pods-WOM-iTunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOM-iTunes.release.xcconfig"; path = "Target Support Files/Pods-WOM-iTunes/Pods-WOM-iTunes.release.xcconfig"; sourceTree = "<group>"; };
 		F9DDB6552C5222D45F8795BA /* Pods-WOM-iTunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOM-iTunes.debug.xcconfig"; path = "Target Support Files/Pods-WOM-iTunes/Pods-WOM-iTunes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +185,7 @@
 				7F1AC33E2BA0B8950083C87F /* Entity */,
 				7F1AC3502BA0BCE70083C87F /* Mapper */,
 				7FFA0B2E2BA0C0DC0000F9FB /* DataSource */,
+				7FFA0B402BA0C4DC0000F9FB /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -436,6 +441,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7FFA0B402BA0C4DC0000F9FB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B412BA0C4E90000F9FB /* HomeDataSource.swift */,
+				7FFA0B432BA0C4F20000F9FB /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		9043B1F88A40E2505E9341D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +583,7 @@
 			files = (
 				7FFA0B342BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift in Sources */,
 				7F1AC34C2BA0BC6E0083C87F /* UiSongInformation.swift in Sources */,
+				7FFA0B422BA0C4E90000F9FB /* HomeDataSource.swift in Sources */,
 				7F544FA62BA0A52800351C42 /* HomeViewModel.swift in Sources */,
 				7F544F902BA0A41900351C42 /* InitCoordinator.swift in Sources */,
 				7F544F882BA0A3A200351C42 /* NotificationCenterWrapper.swift in Sources */,
@@ -598,6 +613,7 @@
 				7F1AC3262BA0AEB80083C87F /* ApiEmptyResponse.swift in Sources */,
 				7F1AC3592BA0BEC90083C87F /* HomeDomainMapperImpl.swift in Sources */,
 				7FFA0B302BA0C1020000F9FB /* HomeRemoteDataSource.swift in Sources */,
+				7FFA0B442BA0C4F20000F9FB /* HomeRepository.swift in Sources */,
 				7FFA0B3A2BA0C31D0000F9FB /* EncodableExtension.swift in Sources */,
 				7F1AC3292BA0AEB80083C87F /* ApiHeaderType.swift in Sources */,
 				7F1AC3572BA0BE9E0083C87F /* HomeDomainMapper.swift in Sources */,

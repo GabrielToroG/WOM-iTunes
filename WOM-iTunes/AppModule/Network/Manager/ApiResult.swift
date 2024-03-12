@@ -12,3 +12,16 @@ enum ApiResult<T> {
     case error(error: ErrorType)
     case unauthorized(error: Error)
 }
+
+extension ApiResult {
+    func map<R>(_ transform: (T) -> R) -> ApiResult<R> {
+        switch self {
+        case .success(let data):
+            return ApiResult<R>.success(data: transform(data))
+        case .error(let error):
+            return ApiResult<R>.error(error: error)
+        case .unauthorized(let error):
+            return ApiResult<R>.unauthorized(error: error)
+        }
+    }
+}
