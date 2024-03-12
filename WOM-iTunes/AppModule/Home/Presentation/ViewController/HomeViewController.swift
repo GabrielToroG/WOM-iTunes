@@ -51,7 +51,8 @@ extension HomeViewController {
 // MARK: - UI Functions
 extension HomeViewController {
     private func configUI() {
-        view.backgroundColor = .systemYellow
+        view.backgroundColor = .systemPurple
+        title = "iTunes"
         configTableView()
         configConstraints()
     }
@@ -66,7 +67,8 @@ extension HomeViewController {
         view.addSubview(mainTableView)
         let tableViewConstraints = [
             mainTableView.topAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.topAnchor),
+                equalTo: view.safeAreaLayoutGuide.topAnchor,
+                constant: Dimensions.Margin.tiny),
             mainTableView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             mainTableView.trailingAnchor.constraint(

@@ -16,7 +16,7 @@ enum Fonts {
             static let bold = "Montserrat-Bold"
         }
     }
-
+    
     // Se definen las fuentes de sistema, en caso de no funcionar las otras
     enum SysFont {
         static let boldSize30 = UIFont.systemFont(ofSize: 30, weight: .bold)
@@ -31,7 +31,7 @@ enum Fonts {
         static let boldSize12 = UIFont.systemFont(ofSize: 12, weight: .bold)
         static let boldSize11 = UIFont.systemFont(ofSize: 11, weight: .bold)
         static let boldSize10 = UIFont.systemFont(ofSize: 10, weight: .bold)
-
+        
         static let semiboldSize30 = UIFont.systemFont(ofSize: 30, weight: .semibold)
         static let semiboldSize20 = UIFont.systemFont(ofSize: 20, weight: .semibold)
         static let semiboldSize19 = UIFont.systemFont(ofSize: 19, weight: .semibold)
@@ -44,7 +44,7 @@ enum Fonts {
         static let semiboldSize12 = UIFont.systemFont(ofSize: 12, weight: .semibold)
         static let semiboldSize11 = UIFont.systemFont(ofSize: 11, weight: .semibold)
         static let semiboldSize10 = UIFont.systemFont(ofSize: 10, weight: .semibold)
-
+        
         static let regularSize30 = UIFont.systemFont(ofSize: 30, weight: .regular)
         static let regularSize20 = UIFont.systemFont(ofSize: 20, weight: .regular)
         static let regularSize19 = UIFont.systemFont(ofSize: 19, weight: .regular)
@@ -57,6 +57,15 @@ enum Fonts {
         static let regularSize12 = UIFont.systemFont(ofSize: 12, weight: .regular)
         static let regularSize11 = UIFont.systemFont(ofSize: 11, weight: .regular)
         static let regularSize10 = UIFont.systemFont(ofSize: 10, weight: .regular)
+    }
+
+    enum Heading {
+        /// Montserrat semibold 30
+        static let heading1 = UIFont(name: FontName.Montserrat.semiBold, size: 30) ?? SysFont.semiboldSize30
+        /// Montserrat semibold 16
+        static let heading2 = UIFont(name: FontName.Montserrat.semiBold, size: 16) ?? SysFont.semiboldSize16
+        /// Montserrat regular 16
+        static let backButton = UIFont(name: FontName.Montserrat.regular, size: 16) ?? SysFont.regularSize16
     }
 
     enum Body {
