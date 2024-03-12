@@ -8,5 +8,21 @@
 import UIKit
 
 final class HomeCoordinator: Coordinator {
+    indirect enum GoToScene: Equatable {
+        case songDetail(SongDetailArgs)
+    }
 
+    func goToScene(
+        scene: GoToScene,
+        from viewController: UIViewController
+    ) {
+        switch scene {
+        case .songDetail(let args):
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: SongDetailViewController.self,
+                args: [args]
+            )
+        }
+    }
 }

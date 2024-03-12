@@ -63,6 +63,11 @@
 		7FFA0B592BA0E09C0000F9FB /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FFA0B552BA0E09C0000F9FB /* Montserrat-SemiBold.ttf */; };
 		7FFA0B5A2BA0E09C0000F9FB /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FFA0B562BA0E09C0000F9FB /* Montserrat-Regular.ttf */; };
 		7FFA0B5C2BA0E0DD0000F9FB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B5B2BA0E0DD0000F9FB /* Fonts.swift */; };
+		7FFA0B642BA0E3380000F9FB /* SongDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B632BA0E3380000F9FB /* SongDetailViewModel.swift */; };
+		7FFA0B662BA0E34A0000F9FB /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B652BA0E34A0000F9FB /* SongDetailViewController.swift */; };
+		7FFA0B682BA0E3520000F9FB /* SongDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B672BA0E3520000F9FB /* SongDetailCoordinator.swift */; };
+		7FFA0B6D2BA0E4C70000F9FB /* SongDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B6C2BA0E4C70000F9FB /* SongDetailModule.swift */; };
+		7FFA0B702BA0E6620000F9FB /* SongDetailArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B6F2BA0E6620000F9FB /* SongDetailArgs.swift */; };
 		B2699DE84AA0B11095E980E1 /* Pods_WOM_iTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFC9371B6EFD524A00C89E0 /* Pods_WOM_iTunes.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +131,11 @@
 		7FFA0B552BA0E09C0000F9FB /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		7FFA0B562BA0E09C0000F9FB /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7FFA0B5B2BA0E0DD0000F9FB /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		7FFA0B632BA0E3380000F9FB /* SongDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewModel.swift; sourceTree = "<group>"; };
+		7FFA0B652BA0E34A0000F9FB /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		7FFA0B672BA0E3520000F9FB /* SongDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailCoordinator.swift; sourceTree = "<group>"; };
+		7FFA0B6C2BA0E4C70000F9FB /* SongDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailModule.swift; sourceTree = "<group>"; };
+		7FFA0B6F2BA0E6620000F9FB /* SongDetailArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailArgs.swift; sourceTree = "<group>"; };
 		C793B4C0A65B28E69552F64E /* Pods-WOM-iTunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOM-iTunes.release.xcconfig"; path = "Target Support Files/Pods-WOM-iTunes/Pods-WOM-iTunes.release.xcconfig"; sourceTree = "<group>"; };
 		F9DDB6552C5222D45F8795BA /* Pods-WOM-iTunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOM-iTunes.debug.xcconfig"; path = "Target Support Files/Pods-WOM-iTunes/Pods-WOM-iTunes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,6 +323,7 @@
 				7F544F7E2BA0A28B00351C42 /* Core */,
 				7F1AC31A2BA0AE890083C87F /* Network */,
 				7F544F992BA0A4DF00351C42 /* Home */,
+				7FFA0B5D2BA0E2030000F9FB /* SongDetail */,
 			);
 			path = AppModule;
 			sourceTree = "<group>";
@@ -512,6 +523,66 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		7FFA0B5D2BA0E2030000F9FB /* SongDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B6E2BA0E6560000F9FB /* Entity */,
+				7FFA0B5E2BA0E21E0000F9FB /* DI */,
+				7FFA0B5F2BA0E2230000F9FB /* Presentation */,
+			);
+			path = SongDetail;
+			sourceTree = "<group>";
+		};
+		7FFA0B5E2BA0E21E0000F9FB /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B6C2BA0E4C70000F9FB /* SongDetailModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7FFA0B5F2BA0E2230000F9FB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B622BA0E32D0000F9FB /* ViewModel */,
+				7FFA0B612BA0E3280000F9FB /* ViewController */,
+				7FFA0B602BA0E3220000F9FB /* Coordinator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7FFA0B602BA0E3220000F9FB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B672BA0E3520000F9FB /* SongDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7FFA0B612BA0E3280000F9FB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B652BA0E34A0000F9FB /* SongDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7FFA0B622BA0E32D0000F9FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B632BA0E3380000F9FB /* SongDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FFA0B6E2BA0E6560000F9FB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B6F2BA0E6620000F9FB /* SongDetailArgs.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		9043B1F88A40E2505E9341D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -647,6 +718,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFA0B702BA0E6620000F9FB /* SongDetailArgs.swift in Sources */,
+				7FFA0B642BA0E3380000F9FB /* SongDetailViewModel.swift in Sources */,
 				7FFA0B342BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift in Sources */,
 				7F1AC34C2BA0BC6E0083C87F /* UiSongInformation.swift in Sources */,
 				7FFA0B422BA0C4E90000F9FB /* HomeDataSource.swift in Sources */,
@@ -669,9 +742,11 @@
 				7F544F812BA0A29D00351C42 /* Injection.swift in Sources */,
 				7FFA0B362BA0C2DE0000F9FB /* ApiiTunesListQueryParams.swift in Sources */,
 				7FFA0B4E2BA0D9310000F9FB /* Dimensions.swift in Sources */,
+				7FFA0B6D2BA0E4C70000F9FB /* SongDetailModule.swift in Sources */,
 				7F544F962BA0A46F00351C42 /* BaseViewController.swift in Sources */,
 				7FFA0B502BA0DF970000F9FB /* UIImageViewExtension.swift in Sources */,
 				7F544F692BA0A15D00351C42 /* AppDelegate.swift in Sources */,
+				7FFA0B682BA0E3520000F9FB /* SongDetailCoordinator.swift in Sources */,
 				7F544F982BA0A48500351C42 /* BaseViewModel.swift in Sources */,
 				7F544F922BA0A42900351C42 /* Coordinator.swift in Sources */,
 				7F1AC3382BA0AF190083C87F /* Reusable.swift in Sources */,
@@ -692,6 +767,7 @@
 				7F544F8E2BA0A40B00351C42 /* CoordinatorProtocol.swift in Sources */,
 				7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */,
 				7FFA0B492BA0D8330000F9FB /* HomeTableViewCell.swift in Sources */,
+				7FFA0B662BA0E34A0000F9FB /* SongDetailViewController.swift in Sources */,
 				7F1AC3542BA0BD300083C87F /* HomeDataMapperImpl.swift in Sources */,
 				7F544F852BA0A2CD00351C42 /* MainModule.swift in Sources */,
 				7F1AC3522BA0BCF50083C87F /* HomeDataMapper.swift in Sources */,

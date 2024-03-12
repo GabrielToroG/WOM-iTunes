@@ -23,6 +23,8 @@ final class HomeViewModel: BaseViewModel {
     private var musicsUS: [UiSongInformation] = []
     private var musicsCL: [UiSongInformation] = []
     private var musicsSE: [UiSongInformation] = []
+
+    @Published private(set) var goTo: HomeCoordinator.GoToScene?
     @Published private(set) var uniqueMusics: [UiSongInformation] = []
 
     let getItunesListUseCase: GetItunesListUseCase
@@ -104,5 +106,12 @@ extension HomeViewModel {
 
     private func setUniqueMusics() {
         uniqueMusics = musicsUS + musicsCL + musicsSE
+    }
+}
+
+extension HomeViewModel {
+    func goToSongDetail(index: Int) {
+        let args = SongDetailArgs(information: uniqueMusics[index])
+        self.goTo = .songDetail(args)
     }
 }

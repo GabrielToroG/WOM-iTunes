@@ -25,9 +25,9 @@ class Coordinator {
     private func resolveArguments<V: UIViewController, T>(
         _ newViewControllerType: V.Type,
         _ name: String? = nil,
-        _ args: T
+        _ args: [T]
     ) -> V {
-        container.resolve(V.self, name: name, argument: args)!
+        container.resolve(V.self, name: name, argument: args[0])!
     }
 }
 
@@ -40,5 +40,15 @@ extension Coordinator {
         var newViewController: V!
         newViewController = resolveArguments(newViewControllerType)
         viewController.navigationController?.pushViewController(newViewController, animated: animated)
+    }
+
+    func pushViewController<V: UIViewController, T>(
+        viewController: UIViewController,
+        newViewControllerType: V.Type,
+        args: [T]
+    ) {
+        var newViewController: V!
+        newViewController = resolveArguments(newViewControllerType, nil, args)
+        viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
 }

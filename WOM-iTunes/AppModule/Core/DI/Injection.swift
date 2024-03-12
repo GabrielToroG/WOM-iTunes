@@ -22,6 +22,7 @@ final class Injection {
         NetworkModule(container).inject()
         MainModule(container).inject()
         HomeModule(container).inject()
+        SongDetailModule(container).inject()
     }
     
     func getContainer() -> Container {

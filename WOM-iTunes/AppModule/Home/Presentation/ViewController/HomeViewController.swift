@@ -34,6 +34,11 @@ extension HomeViewController {
 // MARK: - Bindings
 extension HomeViewController {
     private func configBindings() {
+        viewModel.$goTo.sink { [weak self] scene in
+            guard let self = self, let scene = scene else { return }
+            self.coordinator.goToScene(scene: scene, from: self)
+        }.store(in: &anyCancellable)
+
         viewModel.$uniqueMusics.sink { [weak self] _ in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -77,7 +82,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.uniqueMusics.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: HomeTableViewCell.self, for: indexPath)
         cell.item = viewModel.uniqueMusics[indexPath.row]
@@ -85,10 +90,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        switch indexPath.row {
-        default:
-            print("")
-        }
+        viewModel.goToSongDetail(index: indexPath.row)
     }
 }
