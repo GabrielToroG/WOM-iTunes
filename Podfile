@@ -7,5 +7,5 @@ target 'WOM-iTunes' do
 
   # Pods for WOM-iTunes
   pod 'Swinject'
-
+  pod 'SDWebImage', '~> 5.0'
 end

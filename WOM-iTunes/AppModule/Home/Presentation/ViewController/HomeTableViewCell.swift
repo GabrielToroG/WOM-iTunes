@@ -25,14 +25,15 @@ final class HomeTableViewCell: UITableViewCell {
     }()
     private lazy var trackNameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .systemBlue
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 17, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private lazy var artistNameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .systemBlue
-        label.font = .systemFont(ofSize: 14)
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 14, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -41,6 +42,10 @@ final class HomeTableViewCell: UITableViewCell {
     var item: UiSongInformation? {
         didSet {
             guard let item = item else { return }
+            if let url = URL(string: item.artworkUrl30) {
+                optionImageView.setStyle(.networking)
+                optionImageView.setImage(from: url)
+            }
             trackNameLabel.text = item.trackName
             artistNameLabel.text = item.artistName
         }
