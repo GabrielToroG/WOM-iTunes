@@ -19,6 +19,7 @@ final class HomeDataMapperImpl: HomeDataMapper {
         .init(
             artistName: value.artistName,
             trackName: value.trackName,
+            trackId: value.trackId,
             artworkUrl30: value.artworkUrl30,
             artworkUrl60: value.artworkUrl60,
             artworkUrl100: value.artworkUrl100

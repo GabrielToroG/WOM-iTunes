@@ -8,6 +8,10 @@
 import UIKit
 
 final class SongDetailViewController: BaseViewController<SongDetailViewModel, SongDetailCoordinator> {
+    private enum Constants {
+        static let favoriteOn: String = "general-icon-favorite-on"
+        static let favoriteOff: String = "general-icon-favorite-off"
+    }
     private lazy var songImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .systemBlue
@@ -32,6 +36,17 @@ final class SongDetailViewController: BaseViewController<SongDetailViewModel, So
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    private lazy var addFavoriteButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: Constants.favoriteOff), for: .normal)
+        button.tintColor = .white
+        button.onClick { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.addRemoveFavorites()
+        }
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 }
 
 extension SongDetailViewController {
@@ -39,6 +54,7 @@ extension SongDetailViewController {
         super.viewDidLoad()
         configUI()
         configBindings()
+        viewModel.onViewDidLoad()
     }
 }
 
@@ -53,6 +69,16 @@ extension SongDetailViewController {
             trackNameLabel.text = args.information.trackName
             artistNameLabel.text = args.information.artistName
         }.store(in: &anyCancellable)
+
+        viewModel.$isFavorite.sink { [weak self] isFavorite in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                let imageName = isFavorite ? Constants.favoriteOn : Constants.favoriteOff
+                self.addFavoriteButton.setImage(
+                    UIImage(named: imageName),
+                    for: .normal)
+            }
+        }.store(in: &anyCancellable)
     }
 }
 
@@ -63,10 +89,23 @@ extension SongDetailViewController {
     }
 
     private func configConstraints() {
+        view.addSubview(addFavoriteButton)
         view.addSubview(songImageView)
         view.addSubview(trackNameLabel)
         view.addSubview(artistNameLabel)
 
+        let addFavoriteButtonConstraints = [
+            addFavoriteButton.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor,
+                constant: .zero),
+            addFavoriteButton.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor,
+                constant: -Dimensions.Margin.normal),
+            addFavoriteButton.widthAnchor.constraint(
+                equalToConstant: Dimensions.Icon.normal),
+            addFavoriteButton.heightAnchor.constraint(
+                equalToConstant: Dimensions.Icon.normal)
+        ]
         let songImageViewConstraints = [
             songImageView.centerYAnchor.constraint(
                 equalTo: view.centerYAnchor,
@@ -102,6 +141,7 @@ extension SongDetailViewController {
         ]
 
         NSLayoutConstraint.activate(
+            addFavoriteButtonConstraints +
             songImageViewConstraints +
             trackNameLabelConstraints +
             artistNameLabelConstraints

@@ -10,6 +10,7 @@ import Foundation
 struct DomainSongInformation: Codable {
     let artistName: String
     let trackName: String
+    let trackId: Int
     let artworkUrl30: String
     let artworkUrl60: String
     let artworkUrl100: String
