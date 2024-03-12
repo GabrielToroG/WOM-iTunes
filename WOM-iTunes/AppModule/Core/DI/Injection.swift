@@ -19,6 +19,7 @@ final class Injection {
     }
 
     private func injectDependencies() {
+        NetworkModule(container).inject()
         MainModule(container).inject()
         HomeModule(container).inject()
     }

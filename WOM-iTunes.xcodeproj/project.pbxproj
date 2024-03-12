@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1AC3242BA0AEB80083C87F /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC31D2BA0AEB80083C87F /* ServerConstants.swift */; };
+		7F1AC3252BA0AEB80083C87F /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC31E2BA0AEB80083C87F /* HttpMethod.swift */; };
+		7F1AC3262BA0AEB80083C87F /* ApiEmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC31F2BA0AEB80083C87F /* ApiEmptyResponse.swift */; };
+		7F1AC3272BA0AEB80083C87F /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3202BA0AEB80083C87F /* ApiResult.swift */; };
+		7F1AC3282BA0AEB80083C87F /* ServiceLayerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3212BA0AEB80083C87F /* ServiceLayerImpl.swift */; };
+		7F1AC3292BA0AEB80083C87F /* ApiHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3222BA0AEB80083C87F /* ApiHeaderType.swift */; };
+		7F1AC32A2BA0AEB80083C87F /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3232BA0AEB80083C87F /* ServiceLayer.swift */; };
+		7F1AC3352BA0AF190083C87F /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC32E2BA0AF190083C87F /* BaseUseCase.swift */; };
+		7F1AC3362BA0AF190083C87F /* ClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC32F2BA0AF190083C87F /* ClosureUseCase.swift */; };
+		7F1AC3382BA0AF190083C87F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3322BA0AF190083C87F /* Reusable.swift */; };
+		7F1AC33B2BA0AF7F0083C87F /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC33A2BA0AF7F0083C87F /* NetworkModule.swift */; };
 		7F544F692BA0A15D00351C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544F682BA0A15D00351C42 /* AppDelegate.swift */; };
 		7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544F6A2BA0A15D00351C42 /* SceneDelegate.swift */; };
 		7F544F722BA0A15E00351C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F544F712BA0A15E00351C42 /* Assets.xcassets */; };
@@ -30,6 +41,17 @@
 
 /* Begin PBXFileReference section */
 		5CFC9371B6EFD524A00C89E0 /* Pods_WOM_iTunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOM_iTunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1AC31D2BA0AEB80083C87F /* ServerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		7F1AC31E2BA0AEB80083C87F /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		7F1AC31F2BA0AEB80083C87F /* ApiEmptyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEmptyResponse.swift; sourceTree = "<group>"; };
+		7F1AC3202BA0AEB80083C87F /* ApiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		7F1AC3212BA0AEB80083C87F /* ServiceLayerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayerImpl.swift; sourceTree = "<group>"; };
+		7F1AC3222BA0AEB80083C87F /* ApiHeaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHeaderType.swift; sourceTree = "<group>"; };
+		7F1AC3232BA0AEB80083C87F /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		7F1AC32E2BA0AF190083C87F /* BaseUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
+		7F1AC32F2BA0AF190083C87F /* ClosureUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureUseCase.swift; sourceTree = "<group>"; };
+		7F1AC3322BA0AF190083C87F /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		7F1AC33A2BA0AF7F0083C87F /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 		7F544F652BA0A15D00351C42 /* WOM-iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WOM-iTunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F544F682BA0A15D00351C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F544F6A2BA0A15D00351C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +88,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F1AC31A2BA0AE890083C87F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC31B2BA0AE970083C87F /* DI */,
+				7F1AC31C2BA0AEA30083C87F /* Manager */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7F1AC31B2BA0AE970083C87F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC33A2BA0AF7F0083C87F /* NetworkModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F1AC31C2BA0AEA30083C87F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC31F2BA0AEB80083C87F /* ApiEmptyResponse.swift */,
+				7F1AC3222BA0AEB80083C87F /* ApiHeaderType.swift */,
+				7F1AC3202BA0AEB80083C87F /* ApiResult.swift */,
+				7F1AC31E2BA0AEB80083C87F /* HttpMethod.swift */,
+				7F1AC31D2BA0AEB80083C87F /* ServerConstants.swift */,
+				7F1AC3232BA0AEB80083C87F /* ServiceLayer.swift */,
+				7F1AC3212BA0AEB80083C87F /* ServiceLayerImpl.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7F1AC32B2BA0AF000083C87F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC3312BA0AF190083C87F /* Entity */,
+				7F1AC32D2BA0AF190083C87F /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7F1AC32D2BA0AF190083C87F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC32E2BA0AF190083C87F /* BaseUseCase.swift */,
+				7F1AC32F2BA0AF190083C87F /* ClosureUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		7F1AC3312BA0AF190083C87F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC3322BA0AF190083C87F /* Reusable.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		7F544F5C2BA0A15D00351C42 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				7F544F7E2BA0A28B00351C42 /* Core */,
+				7F1AC31A2BA0AE890083C87F /* Network */,
 				7F544F992BA0A4DF00351C42 /* Home */,
 			);
 			path = AppModule;
@@ -119,6 +199,7 @@
 			children = (
 				7F544F7F2BA0A29000351C42 /* DI */,
 				7F544F862BA0A39100351C42 /* Data */,
+				7F1AC32B2BA0AF000083C87F /* Domain */,
 				7F544F8B2BA0A3EB00351C42 /* Presentation */,
 			);
 			path = Core;
@@ -364,15 +445,26 @@
 				7F544FA62BA0A52800351C42 /* HomeViewModel.swift in Sources */,
 				7F544F902BA0A41900351C42 /* InitCoordinator.swift in Sources */,
 				7F544F882BA0A3A200351C42 /* NotificationCenterWrapper.swift in Sources */,
+				7F1AC3352BA0AF190083C87F /* BaseUseCase.swift in Sources */,
+				7F1AC3242BA0AEB80083C87F /* ServerConstants.swift in Sources */,
+				7F1AC3252BA0AEB80083C87F /* HttpMethod.swift in Sources */,
 				7F544FA22BA0A51900351C42 /* HomeCoordinator.swift in Sources */,
+				7F1AC32A2BA0AEB80083C87F /* ServiceLayer.swift in Sources */,
+				7F1AC33B2BA0AF7F0083C87F /* NetworkModule.swift in Sources */,
 				7F544F9D2BA0A4F800351C42 /* HomeModule.swift in Sources */,
+				7F1AC3282BA0AEB80083C87F /* ServiceLayerImpl.swift in Sources */,
+				7F1AC3272BA0AEB80083C87F /* ApiResult.swift in Sources */,
 				7F544F8A2BA0A3AF00351C42 /* NotificationCenterWrapperImpl.swift in Sources */,
+				7F1AC3362BA0AF190083C87F /* ClosureUseCase.swift in Sources */,
 				7F544F812BA0A29D00351C42 /* Injection.swift in Sources */,
 				7F544F962BA0A46F00351C42 /* BaseViewController.swift in Sources */,
 				7F544F692BA0A15D00351C42 /* AppDelegate.swift in Sources */,
 				7F544F982BA0A48500351C42 /* BaseViewModel.swift in Sources */,
 				7F544F922BA0A42900351C42 /* Coordinator.swift in Sources */,
+				7F1AC3382BA0AF190083C87F /* Reusable.swift in Sources */,
 				7F544FA42BA0A51F00351C42 /* HomeViewController.swift in Sources */,
+				7F1AC3262BA0AEB80083C87F /* ApiEmptyResponse.swift in Sources */,
+				7F1AC3292BA0AEB80083C87F /* ApiHeaderType.swift in Sources */,
 				7F544F8E2BA0A40B00351C42 /* CoordinatorProtocol.swift in Sources */,
 				7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */,
 				7F544F852BA0A2CD00351C42 /* MainModule.swift in Sources */,
