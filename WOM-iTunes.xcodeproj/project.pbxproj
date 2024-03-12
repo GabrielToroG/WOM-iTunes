@@ -18,6 +18,12 @@
 		7F1AC3362BA0AF190083C87F /* ClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC32F2BA0AF190083C87F /* ClosureUseCase.swift */; };
 		7F1AC3382BA0AF190083C87F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3322BA0AF190083C87F /* Reusable.swift */; };
 		7F1AC33B2BA0AF7F0083C87F /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC33A2BA0AF7F0083C87F /* NetworkModule.swift */; };
+		7F1AC3402BA0B9B20083C87F /* ApiiTunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC33F2BA0B9B20083C87F /* ApiiTunesResponse.swift */; };
+		7F1AC3422BA0BA100083C87F /* ApiSongInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3412BA0BA100083C87F /* ApiSongInformation.swift */; };
+		7F1AC3452BA0BBFC0083C87F /* DomainiTunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3442BA0BBFC0083C87F /* DomainiTunesResponse.swift */; };
+		7F1AC3472BA0BC070083C87F /* DomainSongInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3462BA0BC070083C87F /* DomainSongInformation.swift */; };
+		7F1AC34A2BA0BC5B0083C87F /* UiiTunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC3492BA0BC5B0083C87F /* UiiTunesResponse.swift */; };
+		7F1AC34C2BA0BC6E0083C87F /* UiSongInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AC34B2BA0BC6E0083C87F /* UiSongInformation.swift */; };
 		7F544F692BA0A15D00351C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544F682BA0A15D00351C42 /* AppDelegate.swift */; };
 		7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544F6A2BA0A15D00351C42 /* SceneDelegate.swift */; };
 		7F544F722BA0A15E00351C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F544F712BA0A15E00351C42 /* Assets.xcassets */; };
@@ -52,6 +58,12 @@
 		7F1AC32F2BA0AF190083C87F /* ClosureUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureUseCase.swift; sourceTree = "<group>"; };
 		7F1AC3322BA0AF190083C87F /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		7F1AC33A2BA0AF7F0083C87F /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		7F1AC33F2BA0B9B20083C87F /* ApiiTunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiiTunesResponse.swift; sourceTree = "<group>"; };
+		7F1AC3412BA0BA100083C87F /* ApiSongInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSongInformation.swift; sourceTree = "<group>"; };
+		7F1AC3442BA0BBFC0083C87F /* DomainiTunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainiTunesResponse.swift; sourceTree = "<group>"; };
+		7F1AC3462BA0BC070083C87F /* DomainSongInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainSongInformation.swift; sourceTree = "<group>"; };
+		7F1AC3492BA0BC5B0083C87F /* UiiTunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiiTunesResponse.swift; sourceTree = "<group>"; };
+		7F1AC34B2BA0BC6E0083C87F /* UiSongInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiSongInformation.swift; sourceTree = "<group>"; };
 		7F544F652BA0A15D00351C42 /* WOM-iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WOM-iTunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F544F682BA0A15D00351C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F544F6A2BA0A15D00351C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +153,49 @@
 			isa = PBXGroup;
 			children = (
 				7F1AC3322BA0AF190083C87F /* Reusable.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7F1AC33C2BA0B8880083C87F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC33E2BA0B8950083C87F /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7F1AC33D2BA0B88E0083C87F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC3432BA0BBE50083C87F /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7F1AC33E2BA0B8950083C87F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC33F2BA0B9B20083C87F /* ApiiTunesResponse.swift */,
+				7F1AC3412BA0BA100083C87F /* ApiSongInformation.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7F1AC3432BA0BBE50083C87F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC3442BA0BBFC0083C87F /* DomainiTunesResponse.swift */,
+				7F1AC3462BA0BC070083C87F /* DomainSongInformation.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7F1AC3482BA0BC4C0083C87F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7F1AC3492BA0BC5B0083C87F /* UiiTunesResponse.swift */,
+				7F1AC34B2BA0BC6E0083C87F /* UiSongInformation.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -264,6 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				7F544F9A2BA0A4E600351C42 /* DI */,
+				7F1AC33C2BA0B8880083C87F /* Data */,
+				7F1AC33D2BA0B88E0083C87F /* Domain */,
 				7F544F9B2BA0A4EA00351C42 /* Presentation */,
 			);
 			path = Home;
@@ -280,6 +337,7 @@
 		7F544F9B2BA0A4EA00351C42 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7F1AC3482BA0BC4C0083C87F /* Entity */,
 				7F544F9F2BA0A50100351C42 /* Coordinator */,
 				7F544F9E2BA0A4FC00351C42 /* ViewController */,
 				7F544FA02BA0A50800351C42 /* ViewModel */,
@@ -442,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F1AC34C2BA0BC6E0083C87F /* UiSongInformation.swift in Sources */,
 				7F544FA62BA0A52800351C42 /* HomeViewModel.swift in Sources */,
 				7F544F902BA0A41900351C42 /* InitCoordinator.swift in Sources */,
 				7F544F882BA0A3A200351C42 /* NotificationCenterWrapper.swift in Sources */,
@@ -450,6 +509,7 @@
 				7F1AC3252BA0AEB80083C87F /* HttpMethod.swift in Sources */,
 				7F544FA22BA0A51900351C42 /* HomeCoordinator.swift in Sources */,
 				7F1AC32A2BA0AEB80083C87F /* ServiceLayer.swift in Sources */,
+				7F1AC3452BA0BBFC0083C87F /* DomainiTunesResponse.swift in Sources */,
 				7F1AC33B2BA0AF7F0083C87F /* NetworkModule.swift in Sources */,
 				7F544F9D2BA0A4F800351C42 /* HomeModule.swift in Sources */,
 				7F1AC3282BA0AEB80083C87F /* ServiceLayerImpl.swift in Sources */,
@@ -463,11 +523,15 @@
 				7F544F922BA0A42900351C42 /* Coordinator.swift in Sources */,
 				7F1AC3382BA0AF190083C87F /* Reusable.swift in Sources */,
 				7F544FA42BA0A51F00351C42 /* HomeViewController.swift in Sources */,
+				7F1AC34A2BA0BC5B0083C87F /* UiiTunesResponse.swift in Sources */,
+				7F1AC3472BA0BC070083C87F /* DomainSongInformation.swift in Sources */,
 				7F1AC3262BA0AEB80083C87F /* ApiEmptyResponse.swift in Sources */,
 				7F1AC3292BA0AEB80083C87F /* ApiHeaderType.swift in Sources */,
+				7F1AC3402BA0B9B20083C87F /* ApiiTunesResponse.swift in Sources */,
 				7F544F8E2BA0A40B00351C42 /* CoordinatorProtocol.swift in Sources */,
 				7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */,
 				7F544F852BA0A2CD00351C42 /* MainModule.swift in Sources */,
+				7F1AC3422BA0BA100083C87F /* ApiSongInformation.swift in Sources */,
 				7F544F832BA0A2BD00351C42 /* MainControllerProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
