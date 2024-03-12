@@ -8,14 +8,14 @@
 import Foundation
 
 final class HomeDomainMapperImpl: HomeDomainMapper {
-    func dataToDomain(_ value: DomainiTunesResponse) -> UiiTunesResponse {
+    func domainToPresentation(_ value: DomainiTunesResponse) -> UiiTunesResponse {
         .init(
             resultCount: value.resultCount,
-            results: value.results.map(dataToDomain(_:))
+            results: value.results.map(domainToPresentation(_:))
         )
     }
 
-    private func dataToDomain(_ value: DomainSongInformation) -> UiSongInformation {
+    private func domainToPresentation(_ value: DomainSongInformation) -> UiSongInformation {
         .init(
             artistName: value.artistName,
             trackName: value.trackName,

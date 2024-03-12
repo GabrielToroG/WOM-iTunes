@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeDomainMapper {
-    func dataToDomain(_ value: DomainiTunesResponse) -> UiiTunesResponse
+    func domainToPresentation(_ value: DomainiTunesResponse) -> UiiTunesResponse
 }
