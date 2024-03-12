@@ -9,5 +9,5 @@ import Foundation
 
 struct UiiTunesResponse: Codable {
     let resultCount: Int
-    let results: [ApiSongInformation]
+    let results: [UiSongInformation]
 }

@@ -9,6 +9,6 @@ import Foundation
 
 struct DomainiTunesResponse: Codable {
     let resultCount: Int
-    let results: [ApiSongInformation]
+    let results: [DomainSongInformation]
 }
 
