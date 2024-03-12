@@ -23,8 +23,20 @@ enum Dimensions {
         static let extreme: CGFloat = 64
     }
 
+    enum CornerRadius {
+        /// CGFloat = 16
+        static let normal: CGFloat = 16
+    }
+    
     enum Icon {
         /// CGFloat = 32
         static let normal: CGFloat = 32
+    }
+
+    enum ImageView {
+        /// CGFLoat = 80
+        static let normal: CGFloat = 80
+        /// CGFLoat = 160
+        static let big: CGFloat = 160
     }
 }

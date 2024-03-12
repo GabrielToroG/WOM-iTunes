@@ -8,7 +8,7 @@
 import Foundation
 
 final class SongDetailViewModel: BaseViewModel {
-    let args: SongDetailArgs
+    @Published private(set) var args: SongDetailArgs
     
     init(args: SongDetailArgs) {
         self.args = args
