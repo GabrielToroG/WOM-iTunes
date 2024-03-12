@@ -54,6 +54,9 @@
 		7FFA0B422BA0C4E90000F9FB /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B412BA0C4E90000F9FB /* HomeDataSource.swift */; };
 		7FFA0B442BA0C4F20000F9FB /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B432BA0C4F20000F9FB /* HomeRepository.swift */; };
 		7FFA0B472BA0C5E00000F9FB /* GetItunesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B462BA0C5E00000F9FB /* GetItunesListUseCase.swift */; };
+		7FFA0B492BA0D8330000F9FB /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B482BA0D8330000F9FB /* HomeTableViewCell.swift */; };
+		7FFA0B4B2BA0D85E0000F9FB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B4A2BA0D85E0000F9FB /* UITableViewExtension.swift */; };
+		7FFA0B4E2BA0D9310000F9FB /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B4D2BA0D9310000F9FB /* Dimensions.swift */; };
 		B2699DE84AA0B11095E980E1 /* Pods_WOM_iTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFC9371B6EFD524A00C89E0 /* Pods_WOM_iTunes.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +111,9 @@
 		7FFA0B412BA0C4E90000F9FB /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		7FFA0B432BA0C4F20000F9FB /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		7FFA0B462BA0C5E00000F9FB /* GetItunesListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItunesListUseCase.swift; sourceTree = "<group>"; };
+		7FFA0B482BA0D8330000F9FB /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		7FFA0B4A2BA0D85E0000F9FB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		7FFA0B4D2BA0D9310000F9FB /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		C793B4C0A65B28E69552F64E /* Pods-WOM-iTunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOM-iTunes.release.xcconfig"; path = "Target Support Files/Pods-WOM-iTunes/Pods-WOM-iTunes.release.xcconfig"; sourceTree = "<group>"; };
 		F9DDB6552C5222D45F8795BA /* Pods-WOM-iTunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOM-iTunes.debug.xcconfig"; path = "Target Support Files/Pods-WOM-iTunes/Pods-WOM-iTunes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -399,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				7F544FA32BA0A51F00351C42 /* HomeViewController.swift */,
+				7FFA0B482BA0D8330000F9FB /* HomeTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -431,6 +438,7 @@
 		7FFA0B372BA0C3070000F9FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7FFA0B4C2BA0D9260000F9FB /* Constants */,
 				7FFA0B382BA0C3110000F9FB /* Extensions */,
 			);
 			path = Utils;
@@ -440,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				7FFA0B392BA0C31D0000F9FB /* EncodableExtension.swift */,
+				7FFA0B4A2BA0D85E0000F9FB /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,6 +468,14 @@
 				7FFA0B462BA0C5E00000F9FB /* GetItunesListUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		7FFA0B4C2BA0D9260000F9FB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA0B4D2BA0D9310000F9FB /* Dimensions.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		9043B1F88A40E2505E9341D6 /* Frameworks */ = {
@@ -612,6 +629,7 @@
 				7F1AC3362BA0AF190083C87F /* ClosureUseCase.swift in Sources */,
 				7F544F812BA0A29D00351C42 /* Injection.swift in Sources */,
 				7FFA0B362BA0C2DE0000F9FB /* ApiiTunesListQueryParams.swift in Sources */,
+				7FFA0B4E2BA0D9310000F9FB /* Dimensions.swift in Sources */,
 				7F544F962BA0A46F00351C42 /* BaseViewController.swift in Sources */,
 				7F544F692BA0A15D00351C42 /* AppDelegate.swift in Sources */,
 				7F544F982BA0A48500351C42 /* BaseViewModel.swift in Sources */,
@@ -620,6 +638,7 @@
 				7F544FA42BA0A51F00351C42 /* HomeViewController.swift in Sources */,
 				7F1AC34A2BA0BC5B0083C87F /* UiiTunesResponse.swift in Sources */,
 				7FFA0B472BA0C5E00000F9FB /* GetItunesListUseCase.swift in Sources */,
+				7FFA0B4B2BA0D85E0000F9FB /* UITableViewExtension.swift in Sources */,
 				7FFA0B322BA0C1630000F9FB /* iTunesListQueryParams.swift in Sources */,
 				7F1AC3472BA0BC070083C87F /* DomainSongInformation.swift in Sources */,
 				7F1AC3262BA0AEB80083C87F /* ApiEmptyResponse.swift in Sources */,
@@ -632,6 +651,7 @@
 				7F1AC3402BA0B9B20083C87F /* ApiiTunesResponse.swift in Sources */,
 				7F544F8E2BA0A40B00351C42 /* CoordinatorProtocol.swift in Sources */,
 				7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */,
+				7FFA0B492BA0D8330000F9FB /* HomeTableViewCell.swift in Sources */,
 				7F1AC3542BA0BD300083C87F /* HomeDataMapperImpl.swift in Sources */,
 				7F544F852BA0A2CD00351C42 /* MainModule.swift in Sources */,
 				7F1AC3522BA0BCF50083C87F /* HomeDataMapper.swift in Sources */,

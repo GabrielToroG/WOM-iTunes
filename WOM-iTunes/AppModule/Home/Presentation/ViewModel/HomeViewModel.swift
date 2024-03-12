@@ -23,7 +23,7 @@ final class HomeViewModel: BaseViewModel {
     private var musicsUS: [UiSongInformation] = []
     private var musicsCL: [UiSongInformation] = []
     private var musicsSE: [UiSongInformation] = []
-    @Published private(set) var uniqueMusics: Set<UiSongInformation> = []
+    @Published private(set) var uniqueMusics: [UiSongInformation] = []
 
     let getItunesListUseCase: GetItunesListUseCase
 
@@ -103,6 +103,6 @@ extension HomeViewModel {
     }
 
     private func setUniqueMusics() {
-        uniqueMusics = Set(musicsUS + musicsCL + musicsSE)
+        uniqueMusics = musicsUS + musicsCL + musicsSE
     }
 }
