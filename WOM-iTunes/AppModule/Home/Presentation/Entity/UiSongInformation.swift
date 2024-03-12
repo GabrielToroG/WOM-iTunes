@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UiSongInformation: Codable {
+struct UiSongInformation: Hashable {
     let artistName: String
     let trackName: String
     let artworkUrl30: String

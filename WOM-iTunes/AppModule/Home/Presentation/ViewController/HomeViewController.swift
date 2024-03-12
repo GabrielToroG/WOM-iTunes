@@ -19,13 +19,16 @@ extension HomeViewController {
         super.viewDidLoad()
         configUI()
         configBindings()
+        viewModel.onViewDidLoad()
     }
 }
 
 // MARK: - Bindings
 extension HomeViewController {
     private func configBindings() {
-        
+        viewModel.$uniqueMusics.sink { _ in } receiveValue: { value in
+            
+        }.store(in: &anyCancellable)
     }
 }
 

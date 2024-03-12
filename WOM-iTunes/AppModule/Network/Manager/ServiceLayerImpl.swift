@@ -13,7 +13,7 @@ final class ServiceLayerImpl: ServiceLayer {
     // Properties
     private let decoder = JSONDecoder()
     private var baseUrl: String {
-        "https://itunes.apple.com/"
+        "https://itunes.apple.com"
     }
 
     func request<R: Decodable>(
@@ -30,7 +30,6 @@ final class ServiceLayerImpl: ServiceLayer {
 
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        configureHeaders(forRequest: &request, withApiHeaderType: headerType)
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             self.handleResponse(
@@ -66,7 +65,6 @@ final class ServiceLayerImpl: ServiceLayer {
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        configureHeaders(forRequest: &request, withApiHeaderType: headerType)
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             self.handleResponse(
@@ -99,16 +97,6 @@ private extension ServiceLayerImpl {
             result.append(contentsOf: items)
         }
         return result
-    }
-
-    func configureHeaders(forRequest request: inout URLRequest, withApiHeaderType headerType: ApiHeaderType) {
-        switch headerType {
-        case .basic:
-            break
-        case .authenticated:
-            request.addValue("Ankor", forHTTPHeaderField: "User")
-            request.addValue("123", forHTTPHeaderField: "Password")
-        }
     }
 
     func handleResponse<R: Decodable>(

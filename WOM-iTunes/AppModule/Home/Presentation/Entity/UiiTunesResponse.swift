@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UiiTunesResponse: Codable {
+struct UiiTunesResponse {
     let resultCount: Int
     let results: [UiSongInformation]
 }
