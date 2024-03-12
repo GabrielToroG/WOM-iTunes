@@ -26,14 +26,14 @@ final class HomeTableViewCell: UITableViewCell {
     private lazy var trackNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .systemFont(ofSize: 17, weight: .semibold)
+        label.font = Fonts.Body.body1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private lazy var artistNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .systemFont(ofSize: 14, weight: .regular)
+        label.font = Fonts.Body.body2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
