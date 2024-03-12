@@ -9,4 +9,5 @@ import Foundation
 
 protocol HomeDataMapper {
     func dataToDomain(_ value: ApiiTunesResponse) -> DomainiTunesResponse
+    func domainToData(_ value: iTunesListQueryParams) -> ApiiTunesListQueryParams
 }

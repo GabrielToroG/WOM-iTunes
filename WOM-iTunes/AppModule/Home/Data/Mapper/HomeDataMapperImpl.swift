@@ -25,3 +25,14 @@ final class HomeDataMapperImpl: HomeDataMapper {
         )
     }
 }
+
+extension HomeDataMapperImpl {
+    func domainToData(_ value: iTunesListQueryParams) -> ApiiTunesListQueryParams {
+        .init(
+            term: value.term,
+            country: value.country,
+            media: value.media,
+            limit: value.limit
+        )
+    }
+}
