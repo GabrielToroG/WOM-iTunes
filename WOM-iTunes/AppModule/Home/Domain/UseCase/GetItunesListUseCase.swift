@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class GetItunesListUseCase: ClosureUseCase {
+final class s: ClosureUseCase {
     typealias RequestType = iTunesListQueryParams
     typealias ResultType = UiiTunesResponse
     
