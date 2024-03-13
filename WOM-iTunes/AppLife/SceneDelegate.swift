@@ -58,7 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         standardAppearance.shadowColor = .clear                     // delete border bottom
         navController.navigationBar.standardAppearance = standardAppearance
         navController.navigationBar.scrollEdgeAppearance = standardAppearance
-        navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.prefersLargeTitles = false
         navController.navigationBar.tintColor = UIColor.black  // change color to left header, when large titles
     }
 
