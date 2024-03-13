@@ -38,6 +38,7 @@ extension HomeViewModel {
     func onViewDidLoad() {
         getUSItunesList()
     }
+
     private func getUSItunesList() {
         let usQueryParams = iTunesListQueryParams(
             term: Constants.QueryParams.term,
@@ -45,7 +46,7 @@ extension HomeViewModel {
             media: Constants.QueryParams.media,
             limit: Constants.QueryParams.limit
         )
-    
+
         getItunesListUseCase.execute(usQueryParams) { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -67,7 +68,7 @@ extension HomeViewModel {
             media: Constants.QueryParams.media,
             limit: Constants.QueryParams.limit
         )
-    
+
         getItunesListUseCase.execute(clQueryParams) { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -89,7 +90,7 @@ extension HomeViewModel {
             media: Constants.QueryParams.media,
             limit: Constants.QueryParams.limit
         )
-    
+
         getItunesListUseCase.execute(seQueryParams) { [weak self] result in
             guard let self = self else { return }
             switch result {

@@ -19,6 +19,7 @@ final class MainControllerProvider {
             tabBarCoordinator
         }
     }
+
     func getTabBar() -> UITabBarController {
         container.resolve(MainTabBarController.self)!
     }

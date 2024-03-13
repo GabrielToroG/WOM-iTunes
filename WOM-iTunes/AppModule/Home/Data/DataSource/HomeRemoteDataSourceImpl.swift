@@ -19,9 +19,8 @@ final class HomeRemoteDataSourceImpl: HomeRemoteDataSource {
         completion: @escaping(ApiResult<ApiiTunesResponse>) -> Void
     ) {
         manager.requestWithQueryParams(
-            endpoint: "/search",
+            endpoint: ServerConstants.Songs.basePath,
             method: .GET,
-            headerType: .authenticated,
             queryParams: queryParams.asDictionary(),
             onCompletion: completion)
     }

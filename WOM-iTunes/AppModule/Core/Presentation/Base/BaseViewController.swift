@@ -45,7 +45,7 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
         super.viewWillDisappear(animated)
         view.endEditing(true)
     }
-    
+
     deinit {
         anyCancellable.forEach { $0.cancel() }
     }

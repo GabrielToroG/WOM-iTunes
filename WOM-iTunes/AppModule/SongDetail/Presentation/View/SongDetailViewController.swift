@@ -8,10 +8,12 @@
 import UIKit
 
 final class SongDetailViewController: BaseViewController<SongDetailViewModel, SongDetailCoordinator> {
+
     private enum Constants {
         static let favoriteOn: String = "general-icon-favorite-on"
         static let favoriteOff: String = "general-icon-favorite-off"
     }
+
     private lazy var songImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .systemBlue

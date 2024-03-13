@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DomainSongInformation: Codable {
+struct DomainSongInformation: Equatable {
     let artistName: String
     let trackName: String
     let trackId: Int

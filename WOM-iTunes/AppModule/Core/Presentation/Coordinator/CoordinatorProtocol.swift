@@ -11,5 +11,4 @@ protocol CoordinatorProtocol: AnyObject {
     var navigationController: UINavigationController { get set }
     func didDeinit(_ coordinator: CoordinatorProtocol)
     func start()
-    func reset()
 }

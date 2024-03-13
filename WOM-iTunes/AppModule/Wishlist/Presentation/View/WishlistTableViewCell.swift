@@ -8,6 +8,7 @@
 import UIKit
 
 final class WishlistTableViewCell: UITableViewCell {
+
     private enum Constants {
         static let favoriteOn: String = "general-icon-favorite-on"
     }
@@ -73,6 +74,7 @@ extension WishlistTableViewCell {
     private func configUI() {
         configConstraints()
     }
+
     private func configConstraints() {
         contentView.addSubview(containerView)
         containerView.addSubview(optionImageView)

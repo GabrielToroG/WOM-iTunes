@@ -20,7 +20,6 @@ final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinato
     }()
 }
 
-// MARK: - Lifecycle
 extension HomeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,6 @@ extension HomeViewController {
     }
 }
 
-// MARK: - Bindings
 extension HomeViewController {
     private func configBindings() {
         viewModel.$goTo.sink { [weak self] scene in
@@ -60,7 +58,7 @@ extension HomeViewController {
         mainTableView.delegate = self
         mainTableView.registerCellClass(for: HomeTableViewCell.self)
     }
-    
+
     private func configConstraints() {
         view.addSubview(mainTableView)
         let tableViewConstraints = [
@@ -82,7 +80,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.uniqueMusics.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: HomeTableViewCell.self, for: indexPath)
         cell.item = viewModel.uniqueMusics[indexPath.row]

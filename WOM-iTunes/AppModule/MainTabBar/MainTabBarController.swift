@@ -9,11 +9,30 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
 
+    private enum Constants {
+        enum Songs {
+            static let title: String = "Canciones"
+            static let icon: UIImage = UIImage(systemName: "house")!
+        }
+        enum Wishlist {
+            static let title: String = "Favoritos"
+            static let icon: UIImage = UIImage(systemName: "star")!
+        }
+    }
+
     private var homeViewController: UIViewController!
     private var wishlistViewController: UIViewController!
+}
 
+extension MainTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+    }
+}
+
+extension MainTabBarController {
+    private func configUI() {
         configVCs()
         configColorsTabs()
     }
@@ -24,13 +43,13 @@ final class MainTabBarController: UITabBarController {
         let newViewControllers = [
             createNavController(
                 for: homeViewController,
-                title: "Inicio",
-                image: UIImage(systemName: "house")!
+                title: Constants.Songs.title,
+                image: Constants.Songs.icon
             ),
             createNavController(
                 for: wishlistViewController,
-                title: "Favoritos",
-                image: UIImage(systemName: "star")!
+                title: Constants.Wishlist.title,
+                image: Constants.Wishlist.icon
             )
         ]
 

@@ -8,9 +8,11 @@
 import Foundation
 
 final class WishlistViewModel: BaseViewModel {
-    @Published private(set) var refresh: Bool = false
 
     private(set) var songs: [UiSongInformation] = []
+
+    @Published private(set) var refresh: Bool = false
+
 }
 
 extension WishlistViewModel {

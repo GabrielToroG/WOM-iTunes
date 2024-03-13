@@ -10,15 +10,15 @@ import Foundation
 final class GetItunesListUseCase: ClosureUseCase {
     typealias RequestType = iTunesListQueryParams
     typealias ResultType = UiiTunesResponse
-    
+
     let repository: HomeDataSource
     let mapper: HomeDomainMapper
-    
+
     init(repository: HomeDataSource, mapper: HomeDomainMapper) {
         self.repository = repository
         self.mapper = mapper
     }
-    
+
     func execute(
         _ parameters: RequestType,
         _ onCompletion: @escaping (ApiResult<ResultType>) -> Void

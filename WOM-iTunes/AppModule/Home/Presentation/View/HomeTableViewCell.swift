@@ -65,6 +65,7 @@ extension HomeTableViewCell {
     private func configUI() {
         configConstraints()
     }
+
     private func configConstraints() {
         contentView.addSubview(containerView)
         containerView.addSubview(optionImageView)

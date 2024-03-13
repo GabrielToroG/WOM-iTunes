@@ -19,7 +19,6 @@ final class WishlistViewController: BaseViewController<WishlistViewModel, Wishli
     }()
 }
 
-// MARK: - Lifecycle
 extension WishlistViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,6 @@ extension WishlistViewController {
     }
 }
 
-// MARK: - Bindings
 extension WishlistViewController {
     private func configBindings() {
         viewModel.$refresh.sink { [weak self] _ in
@@ -45,7 +43,6 @@ extension WishlistViewController {
     }
 }
 
-// MARK: - UI Functions
 extension WishlistViewController {
     private func configUI() {
         view.backgroundColor = UIColor.primaryColor
@@ -80,7 +77,7 @@ extension WishlistViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.songs.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: WishlistTableViewCell.self, for: indexPath)
         cell.item = viewModel.songs[indexPath.row]

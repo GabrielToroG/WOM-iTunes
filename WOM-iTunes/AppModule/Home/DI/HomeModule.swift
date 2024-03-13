@@ -12,7 +12,7 @@ final class HomeModule {
     init(_ container: Container) {
         self.container = container
     }
-    
+
     func inject() {
         injectData()
         injectDomain()

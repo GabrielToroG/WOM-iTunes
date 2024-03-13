@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DomainiTunesResponse: Codable {
+struct DomainiTunesResponse: Equatable {
     let resultCount: Int
     let results: [DomainSongInformation]
 }

@@ -13,7 +13,7 @@ final class NetworkModule {
     init(_ container: Container) {
         self.container = container
     }
-    
+
     func inject() {
         injectPresentation()
     }

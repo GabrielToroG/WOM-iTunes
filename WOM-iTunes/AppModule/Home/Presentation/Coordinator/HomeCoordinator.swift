@@ -8,6 +8,7 @@
 import UIKit
 
 final class HomeCoordinator: Coordinator {
+
     indirect enum GoToScene: Equatable {
         case songDetail(SongDetailArgs)
     }

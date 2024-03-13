@@ -7,6 +7,4 @@
 
 import Foundation
 
-final class WishlistCoordinator: Coordinator {
-
-}
+final class WishlistCoordinator: Coordinator { }

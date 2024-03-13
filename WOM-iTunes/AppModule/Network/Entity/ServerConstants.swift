@@ -15,11 +15,7 @@ struct ServerConstants {
         static let contentType = "application/json"
         static let unAuthorized = 401
     }
-    enum Home {
-        
-    }
-    enum Orders {
-        private static let basePath = "http://localhost:3000/"
-        static let orders = "\(basePath)/orders"
+    enum Songs {
+        static let basePath = "/search"
     }
 }

@@ -7,6 +7,4 @@
 
 import Foundation
 
-final class SongDetailCoordinator: Coordinator {
-
-}
+final class SongDetailCoordinator: Coordinator { }
