@@ -49,14 +49,15 @@ extension HomeViewModel {
 
         getItunesListUseCase.execute(usQueryParams) { [weak self] result in
             guard let self = self else { return }
+            self.isLoading = true
             switch result {
             case .success(let data):
                 self.musicsUS = data.results
                 self.getCLItunesList()
             case .error(let error):
-                print("")
+                self.isLoading = false
             case .unauthorized(let error):
-                print("")
+                self.isLoading = false
             }
         }
     }
@@ -76,9 +77,9 @@ extension HomeViewModel {
                 self.musicsCL = data.results
                 self.getSEItunesList()
             case .error(let error):
-                print("")
+                self.isLoading = false
             case .unauthorized(let error):
-                print("")
+                self.isLoading = false
             }
         }
     }
@@ -93,6 +94,7 @@ extension HomeViewModel {
 
         getItunesListUseCase.execute(seQueryParams) { [weak self] result in
             guard let self = self else { return }
+            self.isLoading = false
             switch result {
             case .success(let data):
                 self.musicsSE = data.results

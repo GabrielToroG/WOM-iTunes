@@ -10,6 +10,14 @@ import Combine
 
 class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
 
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.color = .white
+        activityIndicator.startAnimating()
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
+
     // Properties
     let viewModel: V
     let coordinator: C
@@ -34,6 +42,7 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        suscribeToLoading()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,5 +57,42 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
 
     deinit {
         anyCancellable.forEach { $0.cancel() }
+    }
+}
+
+extension BaseViewController {
+    private func showLoading(_ value: Bool) {
+        if value {
+            self.addLoadConstraint()
+        } else {
+            self.removeLoadConstraint()
+        }
+    }
+
+    private func addLoadConstraint() {
+        view.addSubview(activityIndicator)
+        loadConstraints = [
+            activityIndicator.topAnchor.constraint(equalTo: view.topAnchor),
+            activityIndicator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            activityIndicator.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            activityIndicator.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(loadConstraints)
+    }
+
+    private func removeLoadConstraint() {
+        NSLayoutConstraint.deactivate(loadConstraints)
+        loadConstraints.removeAll()
+        self.activityIndicator.removeFromSuperview()
+    }
+    
+    func suscribeToLoading() {
+        viewModel.$isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                guard let self = self else { return }
+                self.showLoading(value)
+            }
+            .store(in: &anyCancellable)
     }
 }

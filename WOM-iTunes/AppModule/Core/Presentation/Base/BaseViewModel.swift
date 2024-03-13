@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 open class BaseViewModel {
-    public init() {
-    }
+
+    @Published var isLoading: Bool = false
+
+    public init() {}
 }
