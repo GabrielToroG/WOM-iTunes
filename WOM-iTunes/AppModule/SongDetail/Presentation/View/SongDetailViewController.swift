@@ -56,7 +56,11 @@ extension SongDetailViewController {
         super.viewDidLoad()
         configUI()
         configBindings()
-        viewModel.onViewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.onViewWillAppear()
     }
 }
 

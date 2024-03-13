@@ -18,7 +18,7 @@ final class SongDetailViewModel: BaseViewModel {
 }
 
 extension SongDetailViewModel {
-    func onViewDidLoad() {
+    func onViewWillAppear() {
         let song = args.information
         isFavorite = FavoriteProductsManager.shared.exists(withID: song.trackId)
     }
