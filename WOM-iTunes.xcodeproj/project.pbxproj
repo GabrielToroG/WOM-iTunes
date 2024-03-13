@@ -46,6 +46,15 @@
 		7F544FA22BA0A51900351C42 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544FA12BA0A51900351C42 /* HomeCoordinator.swift */; };
 		7F544FA42BA0A51F00351C42 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544FA32BA0A51F00351C42 /* HomeViewController.swift */; };
 		7F544FA62BA0A52800351C42 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F544FA52BA0A52800351C42 /* HomeViewModel.swift */; };
+		7F5DC45D2BA1399D008DAF8D /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC45C2BA1399D008DAF8D /* TabBarCoordinator.swift */; };
+		7F5DC4602BA13A7B008DAF8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC45F2BA13A7B008DAF8D /* MainTabBarController.swift */; };
+		7F5DC4622BA13AB2008DAF8D /* WishlistModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4612BA13AB2008DAF8D /* WishlistModule.swift */; };
+		7F5DC4682BA13ADD008DAF8D /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4672BA13ADD008DAF8D /* WishlistViewController.swift */; };
+		7F5DC46A2BA13B0C008DAF8D /* WishlistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4692BA13B0C008DAF8D /* WishlistCoordinator.swift */; };
+		7F5DC46C2BA13B17008DAF8D /* WishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC46B2BA13B17008DAF8D /* WishlistViewModel.swift */; };
+		7F5DC46E2BA13CE1008DAF8D /* MainTabBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC46D2BA13CE1008DAF8D /* MainTabBarModule.swift */; };
+		7F5DC4702BA14AB2008DAF8D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC46F2BA14AB2008DAF8D /* UIColorExtension.swift */; };
+		7F5DC4722BA1703E008DAF8D /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4712BA1703E008DAF8D /* WishlistTableViewCell.swift */; };
 		7FFA0B302BA0C1020000F9FB /* HomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B2F2BA0C1020000F9FB /* HomeRemoteDataSource.swift */; };
 		7FFA0B322BA0C1630000F9FB /* iTunesListQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B312BA0C1630000F9FB /* iTunesListQueryParams.swift */; };
 		7FFA0B342BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B332BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift */; };
@@ -118,6 +127,15 @@
 		7F544FA12BA0A51900351C42 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7F544FA32BA0A51F00351C42 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F544FA52BA0A52800351C42 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7F5DC45C2BA1399D008DAF8D /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		7F5DC45F2BA13A7B008DAF8D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7F5DC4612BA13AB2008DAF8D /* WishlistModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistModule.swift; sourceTree = "<group>"; };
+		7F5DC4672BA13ADD008DAF8D /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		7F5DC4692BA13B0C008DAF8D /* WishlistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCoordinator.swift; sourceTree = "<group>"; };
+		7F5DC46B2BA13B17008DAF8D /* WishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewModel.swift; sourceTree = "<group>"; };
+		7F5DC46D2BA13CE1008DAF8D /* MainTabBarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarModule.swift; sourceTree = "<group>"; };
+		7F5DC46F2BA14AB2008DAF8D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7F5DC4712BA1703E008DAF8D /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
 		7FFA0B2F2BA0C1020000F9FB /* HomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSource.swift; sourceTree = "<group>"; };
 		7FFA0B312BA0C1630000F9FB /* iTunesListQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesListQueryParams.swift; sourceTree = "<group>"; };
 		7FFA0B332BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -330,8 +348,10 @@
 			children = (
 				7F544F7E2BA0A28B00351C42 /* Core */,
 				7F1AC31A2BA0AE890083C87F /* Network */,
+				7F5DC45E2BA13A5E008DAF8D /* MainTabBar */,
 				7F544F992BA0A4DF00351C42 /* Home */,
 				7FFA0B5D2BA0E2030000F9FB /* SongDetail */,
+				7F5DC45A2BA1389E008DAF8D /* Wishlist */,
 			);
 			path = AppModule;
 			sourceTree = "<group>";
@@ -383,6 +403,7 @@
 				7F544F8D2BA0A40B00351C42 /* CoordinatorProtocol.swift */,
 				7F544F8F2BA0A41900351C42 /* InitCoordinator.swift */,
 				7F544F912BA0A42900351C42 /* Coordinator.swift */,
+				7F5DC45C2BA1399D008DAF8D /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -458,6 +479,67 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7F5DC45A2BA1389E008DAF8D /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC45B2BA138C4008DAF8D /* DI */,
+				7F5DC4632BA13AB6008DAF8D /* Presentation */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		7F5DC45B2BA138C4008DAF8D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC4612BA13AB2008DAF8D /* WishlistModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F5DC45E2BA13A5E008DAF8D /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC45F2BA13A7B008DAF8D /* MainTabBarController.swift */,
+				7F5DC46D2BA13CE1008DAF8D /* MainTabBarModule.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		7F5DC4632BA13AB6008DAF8D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC4662BA13ACF008DAF8D /* View */,
+				7F5DC4652BA13AC3008DAF8D /* ViewModel */,
+				7F5DC4642BA13ABF008DAF8D /* Coordinator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F5DC4642BA13ABF008DAF8D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC4692BA13B0C008DAF8D /* WishlistCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7F5DC4652BA13AC3008DAF8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC46B2BA13B17008DAF8D /* WishlistViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F5DC4662BA13ACF008DAF8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC4672BA13ADD008DAF8D /* WishlistViewController.swift */,
+				7F5DC4712BA1703E008DAF8D /* WishlistTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7FFA0B2E2BA0C0DC0000F9FB /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +565,7 @@
 				7FFA0B4A2BA0D85E0000F9FB /* UITableViewExtension.swift */,
 				7FFA0B4F2BA0DF970000F9FB /* UIImageViewExtension.swift */,
 				7FFA0B792BA118760000F9FB /* UIViewExtension.swift */,
+				7F5DC46F2BA14AB2008DAF8D /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -780,26 +863,31 @@
 				7F544F882BA0A3A200351C42 /* NotificationCenterWrapper.swift in Sources */,
 				7FFA0B5C2BA0E0DD0000F9FB /* Fonts.swift in Sources */,
 				7F1AC3352BA0AF190083C87F /* BaseUseCase.swift in Sources */,
+				7F5DC4702BA14AB2008DAF8D /* UIColorExtension.swift in Sources */,
 				7F1AC3242BA0AEB80083C87F /* ServerConstants.swift in Sources */,
 				7F1AC3252BA0AEB80083C87F /* HttpMethod.swift in Sources */,
 				7F544FA22BA0A51900351C42 /* HomeCoordinator.swift in Sources */,
 				7F1AC32A2BA0AEB80083C87F /* ServiceLayer.swift in Sources */,
 				7F1AC3452BA0BBFC0083C87F /* DomainiTunesResponse.swift in Sources */,
+				7F5DC46A2BA13B0C008DAF8D /* WishlistCoordinator.swift in Sources */,
 				7F1AC33B2BA0AF7F0083C87F /* NetworkModule.swift in Sources */,
 				7F544F9D2BA0A4F800351C42 /* HomeModule.swift in Sources */,
 				7F1AC3282BA0AEB80083C87F /* ServiceLayerImpl.swift in Sources */,
 				7F1AC3272BA0AEB80083C87F /* ApiResult.swift in Sources */,
 				7F544F8A2BA0A3AF00351C42 /* NotificationCenterWrapperImpl.swift in Sources */,
+				7F5DC46C2BA13B17008DAF8D /* WishlistViewModel.swift in Sources */,
 				7F1AC3362BA0AF190083C87F /* ClosureUseCase.swift in Sources */,
 				7F544F812BA0A29D00351C42 /* Injection.swift in Sources */,
 				7FFA0B7A2BA118760000F9FB /* UIViewExtension.swift in Sources */,
 				7FFA0B362BA0C2DE0000F9FB /* ApiiTunesListQueryParams.swift in Sources */,
+				7F5DC4602BA13A7B008DAF8D /* MainTabBarController.swift in Sources */,
 				7FFA0B4E2BA0D9310000F9FB /* Dimensions.swift in Sources */,
 				7FFA0B6D2BA0E4C70000F9FB /* SongDetailModule.swift in Sources */,
 				7F544F962BA0A46F00351C42 /* BaseViewController.swift in Sources */,
 				7FFA0B742BA1079B0000F9FB /* SongDetailDataSource.swift in Sources */,
 				7FFA0B502BA0DF970000F9FB /* UIImageViewExtension.swift in Sources */,
 				7F544F692BA0A15D00351C42 /* AppDelegate.swift in Sources */,
+				7F5DC4682BA13ADD008DAF8D /* WishlistViewController.swift in Sources */,
 				7FFA0B682BA0E3520000F9FB /* SongDetailCoordinator.swift in Sources */,
 				7F544F982BA0A48500351C42 /* BaseViewModel.swift in Sources */,
 				7F544F922BA0A42900351C42 /* Coordinator.swift in Sources */,
@@ -808,9 +896,11 @@
 				7F1AC34A2BA0BC5B0083C87F /* UiiTunesResponse.swift in Sources */,
 				7FFA0B472BA0C5E00000F9FB /* GetItunesListUseCase.swift in Sources */,
 				7FFA0B4B2BA0D85E0000F9FB /* UITableViewExtension.swift in Sources */,
+				7F5DC45D2BA1399D008DAF8D /* TabBarCoordinator.swift in Sources */,
 				7FFA0B322BA0C1630000F9FB /* iTunesListQueryParams.swift in Sources */,
 				7F1AC3472BA0BC070083C87F /* DomainSongInformation.swift in Sources */,
 				7F1AC3262BA0AEB80083C87F /* ApiEmptyResponse.swift in Sources */,
+				7F5DC46E2BA13CE1008DAF8D /* MainTabBarModule.swift in Sources */,
 				7F1AC3592BA0BEC90083C87F /* HomeDomainMapperImpl.swift in Sources */,
 				7FFA0B302BA0C1020000F9FB /* HomeRemoteDataSource.swift in Sources */,
 				7FFA0B442BA0C4F20000F9FB /* HomeRepository.swift in Sources */,
@@ -820,12 +910,14 @@
 				7F1AC3572BA0BE9E0083C87F /* HomeDomainMapper.swift in Sources */,
 				7F1AC3402BA0B9B20083C87F /* ApiiTunesResponse.swift in Sources */,
 				7F544F8E2BA0A40B00351C42 /* CoordinatorProtocol.swift in Sources */,
+				7F5DC4622BA13AB2008DAF8D /* WishlistModule.swift in Sources */,
 				7F544F6B2BA0A15D00351C42 /* SceneDelegate.swift in Sources */,
 				7FFA0B492BA0D8330000F9FB /* HomeTableViewCell.swift in Sources */,
 				7FFA0B662BA0E34A0000F9FB /* SongDetailViewController.swift in Sources */,
 				7F1AC3542BA0BD300083C87F /* HomeDataMapperImpl.swift in Sources */,
 				7F544F852BA0A2CD00351C42 /* MainModule.swift in Sources */,
 				7F1AC3522BA0BCF50083C87F /* HomeDataMapper.swift in Sources */,
+				7F5DC4722BA1703E008DAF8D /* WishlistTableViewCell.swift in Sources */,
 				7FFA0B7D2BA118C00000F9FB /* ClickableGestureRecognizer.swift in Sources */,
 				7F1AC3422BA0BA100083C87F /* ApiSongInformation.swift in Sources */,
 				7F544F832BA0A2BD00351C42 /* MainControllerProvider.swift in Sources */,

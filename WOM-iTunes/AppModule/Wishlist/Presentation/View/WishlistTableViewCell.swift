@@ -1,13 +1,16 @@
 //
-//  HomeTableViewCell.swift
+//  WishlistTableViewCell.swift
 //  WOM-iTunes
 //
-//  Created by Gabriel Alonso Toro Guzmán on 12-03-24.
+//  Created by Gabriel Alonso Toro Guzmán on 13-03-24.
 //
 
 import UIKit
 
-final class HomeTableViewCell: UITableViewCell {
+final class WishlistTableViewCell: UITableViewCell {
+    private enum Constants {
+        static let favoriteOn: String = "general-icon-favorite-on"
+    }
 
     // Outlets
     private lazy var containerView: UIView = {
@@ -29,13 +32,19 @@ final class HomeTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private lazy var artistNameLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.font = Fonts.Body.body2
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var removeFavoriteButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: Constants.favoriteOn), for: .normal)
+        button.tintColor = .white
+        button.onClick { [weak self] in
+            guard let self = self else { return }
+            self.tapFavoriteButton?()
+        }
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
+
+    var tapFavoriteButton: (() -> Void)?
 
     // Config
     var item: UiSongInformation? {
@@ -46,7 +55,6 @@ final class HomeTableViewCell: UITableViewCell {
                 optionImageView.setImage(from: url)
             }
             trackNameLabel.text = item.trackName
-            artistNameLabel.text = item.artistName
         }
     }
 
@@ -61,7 +69,7 @@ final class HomeTableViewCell: UITableViewCell {
     }
 }
 
-extension HomeTableViewCell {
+extension WishlistTableViewCell {
     private func configUI() {
         configConstraints()
     }
@@ -69,7 +77,7 @@ extension HomeTableViewCell {
         contentView.addSubview(containerView)
         containerView.addSubview(optionImageView)
         containerView.addSubview(trackNameLabel)
-        containerView.addSubview(artistNameLabel)
+        containerView.addSubview(removeFavoriteButton)
 
         let containerViewConstraints = [
             containerView.topAnchor.constraint(
@@ -99,30 +107,30 @@ extension HomeTableViewCell {
             trackNameLabel.leadingAnchor.constraint(
                 equalTo: optionImageView.trailingAnchor,
                 constant: Dimensions.Margin.normal),
-            trackNameLabel.trailingAnchor.constraint(
-                equalTo: containerView.trailingAnchor,
-                constant: -Dimensions.Margin.normal)
-        ]
-        let artistNameLabelConstraints = [
-            artistNameLabel.topAnchor.constraint(
-                equalTo: trackNameLabel.bottomAnchor,
-                constant: .zero),
-            artistNameLabel.leadingAnchor.constraint(
-                equalTo: optionImageView.trailingAnchor,
-                constant: Dimensions.Margin.normal),
-            artistNameLabel.trailingAnchor.constraint(
-                equalTo: containerView.trailingAnchor,
-                constant: -Dimensions.Margin.normal),
-            artistNameLabel.bottomAnchor.constraint(
+            trackNameLabel.bottomAnchor.constraint(
                 equalTo: containerView.bottomAnchor,
                 constant: -Dimensions.Margin.small)
+        ]
+        let removeFavoriteButtonConstraints = [
+            removeFavoriteButton.centerYAnchor.constraint(
+                equalTo: containerView.centerYAnchor),
+            removeFavoriteButton.leadingAnchor.constraint(
+                equalTo: trackNameLabel.trailingAnchor,
+                constant: Dimensions.Margin.normal),
+            removeFavoriteButton.trailingAnchor.constraint(
+                equalTo: containerView.trailingAnchor,
+                constant: -Dimensions.Margin.normal),
+            removeFavoriteButton.widthAnchor.constraint(
+                equalToConstant: Dimensions.Icon.normal),
+            removeFavoriteButton.heightAnchor.constraint(
+                equalToConstant: Dimensions.Icon.normal)
         ]
 
         NSLayoutConstraint.activate(
             containerViewConstraints +
             optionImageViewConstraints +
             trackNameLabelConstraints +
-            artistNameLabelConstraints
+            removeFavoriteButtonConstraints
         )
     }
 }

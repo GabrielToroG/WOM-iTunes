@@ -21,8 +21,10 @@ final class Injection {
     private func injectDependencies() {
         NetworkModule(container).inject()
         MainModule(container).inject()
+        MainTabBarModule(container).inject()
         HomeModule(container).inject()
         SongDetailModule(container).inject()
+        WishlistModule(container).inject()
     }
     
     func getContainer() -> Container {

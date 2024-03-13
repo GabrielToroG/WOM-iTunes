@@ -84,7 +84,7 @@ extension SongDetailViewController {
 
 extension SongDetailViewController {
     private func configUI() {
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = UIColor.primaryColor
         configConstraints()
     }
 

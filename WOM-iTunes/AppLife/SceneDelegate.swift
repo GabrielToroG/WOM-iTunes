@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var coordinator: InitCoordinator?
+    var coordinator: TabBarCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
@@ -20,11 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Configure UINavigationController
         let navController = UINavigationController()
+        navController.setNavigationBarHidden(true, animated: false)
         configNavigationController(navController)
         
         // Dependency injection
-        coordinator = InitCoordinator(navigationController: navController, container: container)
-        Injection.shared.controllerProvider.inject(initCoordinator: coordinator)
+        coordinator = TabBarCoordinator(navigationController: navController, container: container)
+        injection.controllerProvider.inject(tabBarCoordinator: coordinator)
         coordinator?.start()
 
         // Configure the window
@@ -54,7 +55,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ]
         standardAppearance.backButtonAppearance = backButtonAppearance
         standardAppearance.configureWithOpaqueBackground()          // So that it does not become lighter
-        standardAppearance.backgroundColor = UIColor.systemPurple
+        standardAppearance.backgroundColor = UIColor.primaryColor
         standardAppearance.shadowColor = .clear                     // delete border bottom
         navController.navigationBar.standardAppearance = standardAppearance
         navController.navigationBar.scrollEdgeAppearance = standardAppearance

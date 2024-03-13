@@ -14,12 +14,18 @@ final class MainControllerProvider {
         self.container = container
     }
 
-    func inject(initCoordinator: InitCoordinator?) {
-        container.register(InitCoordinator?.self) { _ in
-            initCoordinator
+    func inject(tabBarCoordinator: TabBarCoordinator?) {
+        container.register(TabBarCoordinator?.self) { _ in
+            tabBarCoordinator
         }
+    }
+    func getTabBar() -> UITabBarController {
+        container.resolve(MainTabBarController.self)!
     }
     func getHome() -> UIViewController {
         container.resolve(HomeViewController.self)!
+    }
+    func getWishlist() -> UIViewController {
+        container.resolve(WishlistViewController.self)!
     }
 }
