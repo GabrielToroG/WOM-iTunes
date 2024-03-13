@@ -43,6 +43,7 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         suscribeToLoading()
+        suscribeToError()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -86,12 +87,37 @@ extension BaseViewController {
         self.activityIndicator.removeFromSuperview()
     }
     
-    func suscribeToLoading() {
+    private func suscribeToLoading() {
         viewModel.$isLoading
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 guard let self = self else { return }
                 self.showLoading(value)
+            }
+            .store(in: &anyCancellable)
+    }
+}
+
+extension BaseViewController {
+    private func suscribeToError() {
+        viewModel.$errorType
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                guard let self = self else { return }
+                if !value.title.isEmpty {
+                    let alertController = UIAlertController(
+                        title: value.title,
+                        message: value.description,
+                        preferredStyle: .alert
+                    )
+                    let okAction = UIAlertAction(
+                        title: "Ok",
+                        style: .cancel,
+                        handler: nil
+                    )
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
             .store(in: &anyCancellable)
     }

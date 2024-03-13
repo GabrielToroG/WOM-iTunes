@@ -56,7 +56,8 @@ extension HomeViewModel {
                 self.getCLItunesList()
             case .error(let error):
                 self.isLoading = false
-            case .unauthorized(let error):
+                self.onError(error)
+            case .unauthorized(_):
                 self.isLoading = false
             }
         }
@@ -78,7 +79,8 @@ extension HomeViewModel {
                 self.getSEItunesList()
             case .error(let error):
                 self.isLoading = false
-            case .unauthorized(let error):
+                self.onError(error)
+            case .unauthorized(_):
                 self.isLoading = false
             }
         }
@@ -100,8 +102,8 @@ extension HomeViewModel {
                 self.musicsSE = data.results
                 self.setUniqueMusics()
             case .error(let error):
-                print("")
-            case .unauthorized(let error):
+                self.onError(error)
+            case .unauthorized(_):
                 print("")
             }
         }

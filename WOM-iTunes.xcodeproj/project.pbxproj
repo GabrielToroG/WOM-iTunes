@@ -54,6 +54,7 @@
 		7F5DC4702BA14AB2008DAF8D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC46F2BA14AB2008DAF8D /* UIColorExtension.swift */; };
 		7F5DC4722BA1703E008DAF8D /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4712BA1703E008DAF8D /* WishlistTableViewCell.swift */; };
 		7F5DC4762BA17C8C008DAF8D /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4752BA17C8C008DAF8D /* ErrorType.swift */; };
+		7F5DC47A2BA18591008DAF8D /* ErrorArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DC4792BA18591008DAF8D /* ErrorArgs.swift */; };
 		7FFA0B302BA0C1020000F9FB /* HomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B2F2BA0C1020000F9FB /* HomeRemoteDataSource.swift */; };
 		7FFA0B322BA0C1630000F9FB /* iTunesListQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B312BA0C1630000F9FB /* iTunesListQueryParams.swift */; };
 		7FFA0B342BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA0B332BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift */; };
@@ -133,6 +134,7 @@
 		7F5DC46F2BA14AB2008DAF8D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7F5DC4712BA1703E008DAF8D /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
 		7F5DC4752BA17C8C008DAF8D /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		7F5DC4792BA18591008DAF8D /* ErrorArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorArgs.swift; sourceTree = "<group>"; };
 		7FFA0B2F2BA0C1020000F9FB /* HomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSource.swift; sourceTree = "<group>"; };
 		7FFA0B312BA0C1630000F9FB /* iTunesListQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesListQueryParams.swift; sourceTree = "<group>"; };
 		7FFA0B332BA0C2200000F9FB /* HomeRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			children = (
 				7F5DC4732BA17A5A008DAF8D /* Base */,
 				7F544F8C2BA0A3FE00351C42 /* Coordinator */,
+				7F5DC4782BA1857D008DAF8D /* Entity */,
 				7F544F932BA0A43F00351C42 /* View */,
 				7FFA0B7B2BA118B50000F9FB /* UIEvent */,
 			);
@@ -547,6 +550,14 @@
 				7F5DC4752BA17C8C008DAF8D /* ErrorType.swift */,
 				7F1AC31E2BA0AEB80083C87F /* HttpMethod.swift */,
 				7F1AC31D2BA0AEB80083C87F /* ServerConstants.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7F5DC4782BA1857D008DAF8D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7F5DC4792BA18591008DAF8D /* ErrorArgs.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -859,6 +870,7 @@
 				7F1AC3352BA0AF190083C87F /* BaseUseCase.swift in Sources */,
 				7F5DC4702BA14AB2008DAF8D /* UIColorExtension.swift in Sources */,
 				7F1AC3242BA0AEB80083C87F /* ServerConstants.swift in Sources */,
+				7F5DC47A2BA18591008DAF8D /* ErrorArgs.swift in Sources */,
 				7F1AC3252BA0AEB80083C87F /* HttpMethod.swift in Sources */,
 				7F544FA22BA0A51900351C42 /* HomeCoordinator.swift in Sources */,
 				7F1AC32A2BA0AEB80083C87F /* ServiceLayer.swift in Sources */,
