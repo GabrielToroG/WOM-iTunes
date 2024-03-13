@@ -110,7 +110,17 @@ extension HomeViewModel {
     }
 
     private func setUniqueMusics() {
-        uniqueMusics = musicsUS + musicsCL + musicsSE
+        let songs = musicsUS + musicsCL + musicsSE
+        var uniqueTrackNamesSet = Set<String>()
+        var uniqueSongsArray = [UiSongInformation]()
+
+        for song in songs {
+            if !uniqueTrackNamesSet.contains(song.trackName) {
+                uniqueTrackNamesSet.insert(song.trackName)
+                uniqueSongsArray.append(song)
+            }
+        }
+        uniqueMusics = uniqueSongsArray
     }
 }
 
