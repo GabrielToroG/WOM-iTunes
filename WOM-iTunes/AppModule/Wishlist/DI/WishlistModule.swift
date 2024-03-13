@@ -23,7 +23,7 @@ final class WishlistModule {
 private extension WishlistModule {
     func injectPresentation() {
         container.register(WishlistViewModel.self) { resolver in
-            WishlistViewModel()
+            WishlistViewModel(resolver.resolve(FavoriteProductsManager.self)!)
         }
         container.register(WishlistCoordinator.self) { resolver in
             WishlistCoordinator(container: self.container)

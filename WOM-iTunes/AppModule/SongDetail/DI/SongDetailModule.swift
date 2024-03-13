@@ -21,8 +21,11 @@ final class SongDetailModule {
 
 private extension SongDetailModule {
     func injectPresentation() {
-        container.register(SongDetailViewModel.self) { _, args in
-            SongDetailViewModel(args: args)
+        container.register(SongDetailViewModel.self) { (resolver, args) in
+            SongDetailViewModel(
+                resolver.resolve(FavoriteProductsManager.self)!,
+                args
+            )
         }
         container.register(SongDetailCoordinator.self) { resolver in
             SongDetailCoordinator(container: self.container)

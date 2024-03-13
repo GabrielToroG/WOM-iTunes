@@ -10,22 +10,26 @@ import Foundation
 final class WishlistViewModel: BaseViewModel {
 
     private(set) var songs: [UiSongInformation] = []
+    private let favoriteProductsManager: FavoriteProductsManager
 
     @Published private(set) var refresh: Bool = false
 
+    init(_ favoriteProductsManager: FavoriteProductsManager) {
+        self.favoriteProductsManager = favoriteProductsManager
+    }
 }
 
 extension WishlistViewModel {
     func onViewWillAppear() {
-        songs = FavoriteProductsManager.shared.getAll()
+        songs = favoriteProductsManager.getAll()
         refresh = true
     }
 }
 
 extension WishlistViewModel {
     func removeWishlist(index: Int) {
-        FavoriteProductsManager.shared.remove(withID: songs[index].trackId)
-        songs = FavoriteProductsManager.shared.getAll()
+        favoriteProductsManager.remove(withID: songs[index].trackId)
+        songs = favoriteProductsManager.getAll()
         refresh = true
     }
 }

@@ -9,10 +9,16 @@ import Foundation
 
 final class SongDetailViewModel: BaseViewModel {
 
+    private let favoriteProductsManager: FavoriteProductsManager
+
     @Published private(set) var args: SongDetailArgs
     @Published private(set) var isFavorite: Bool = false
 
-    init(args: SongDetailArgs) {
+    init(
+        _ favoriteProductsManager: FavoriteProductsManager,
+        _ args: SongDetailArgs
+    ) {
+        self.favoriteProductsManager = favoriteProductsManager
         self.args = args
     }
 }
@@ -27,11 +33,11 @@ extension SongDetailViewModel {
 extension SongDetailViewModel {
     func addRemoveFavorites() {
         let song = args.information
-        if FavoriteProductsManager.shared.exists(withID: song.trackId) {
-            FavoriteProductsManager.shared.remove(withID: song.trackId)
+        if favoriteProductsManager.exists(withID: song.trackId) {
+            favoriteProductsManager.remove(withID: song.trackId)
             isFavorite = false
         } else {
-            FavoriteProductsManager.shared.add(song)
+            favoriteProductsManager.add(song)
             isFavorite = true
         }
     }

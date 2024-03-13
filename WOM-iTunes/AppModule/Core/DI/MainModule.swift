@@ -24,5 +24,8 @@ final class MainModule {
             NotificationCenterWrapperImpl(
                 notificationCenter: resolver.resolve(NotificationCenter.self)!)
         }
+        container.register(FavoriteProductsManager.self) { _ in
+            FavoriteProductsManager.shared
+        }.inObjectScope(.container)
     }
 }
