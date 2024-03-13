@@ -35,7 +35,7 @@ final class HomeViewModel: BaseViewModel {
 }
 
 extension HomeViewModel {
-    func onViewDidLoad() {
+    func onViewWillAppear() {
         getUSItunesList()
     }
 
